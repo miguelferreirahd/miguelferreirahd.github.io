@@ -22,20 +22,6 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             position: relative;
         }
-        .video-container {
-            position: relative;
-            overflow: hidden;
-            width: 100%;
-            padding-top: 56.25%; /* Aspect ratio 16:9 */
-        }
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
         h1 {
             font-size: 36px;
             font-weight: bold;
@@ -44,10 +30,28 @@
             font-family: 'Georgia', serif;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
+        .video-container {
+            margin-top: 20px;
+        }
+        .video-container a {
+            display: inline-block;
+            padding: 15px 25px;
+            font-size: 20px;
+            color: white;
+            background-color: #ff0000;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
         .subscribe-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
             margin-top: 20px;
         }
         .subscribe-text {
@@ -56,14 +60,6 @@
             color: #ff0000;
             margin-bottom: 10px;
             text-shadow: 2px 2px 5px rgba(255, 0, 0, 0.8);
-            background: linear-gradient(45deg, #ff0000, #ff8000);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: glow 1.5s infinite alternate;
-        }
-        @keyframes glow {
-            0% { text-shadow: 2px 2px 10px rgba(255, 0, 0, 0.8); }
-            100% { text-shadow: 2px 2px 20px rgba(255, 0, 0, 1); }
         }
         .subscribe-btn {
             display: inline-block;
@@ -79,23 +75,6 @@
             box-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
             animation: pulse 1.5s infinite;
         }
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
-        }
-        /* Animación de cruces flotantes */
-        .cross {
-            position: absolute;
-            font-size: 24px;
-            color: rgba(255, 255, 255, 0.8);
-            animation: float 10s linear infinite;
-        }
-        @keyframes float {
-            0% { transform: translateY(100vh); opacity: 0; }
-            50% { opacity: 1; }
-            100% { transform: translateY(-10vh); opacity: 0; }
-        }
         .footer {
             margin-top: 30px;
             padding: 20px;
@@ -103,33 +82,17 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        .footer p {
-            font-size: 16px;
-            color: #333;
-        }
     </style>
 </head>
 <body>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            for (let i = 0; i < 10; i++) {
-                let cross = document.createElement("div");
-                cross.classList.add("cross");
-                cross.innerHTML = "✝";
-                cross.style.left = Math.random() * 100 + "vw";
-                cross.style.animationDuration = (Math.random() * 5 + 5) + "s";
-                document.body.appendChild(cross);
-            }
-        });
-    </script>
     <div class="container">
-        <h1>ORACION DE LA MAÑANA</h1>
+        <h1>ORACIÓN DE LA MAÑANA</h1>
         <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/ZCF6rCwSCKs?si=S7mSlcYjfs7bXPk3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <a href="https://www.youtube.com/watch?v=gh0dPGReBzk" target="_blank">📺 Ver Video en YouTube</a>
         </div>
         <div class="subscribe-container">
             <p class="subscribe-text">SUSCRÍBETE SI AMAS A NUESTRO DIOS</p>
-            <a class="subscribe-btn" href="https://www.youtube.com/@oracionesamorajesus?sub_confirmation=1" target="_blank">Suscribirse</a>
+            <a class="subscribe-btn" href="https://www.youtube.com/@OracionDelaMa%C3%B1ana-o5u?sub_confirmation=1" target="_blank">Suscribirse</a>
         </div>
     </div>
     <div class="footer">
