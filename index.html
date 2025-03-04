@@ -34,22 +34,19 @@
             margin-top: 20px;
         }
         .video-container a {
-            display: inline-block;
-            padding: 15px 25px;
-            font-size: 20px;
-            color: white;
-            background-color: #ff0000;
-            border: none;
-            border-radius: 5px;
+            display: block;
             text-decoration: none;
-            font-weight: bold;
-            box-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
-            animation: pulse 1.5s infinite;
+            color: inherit;
         }
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
+        .video-container img {
+            width: 100%;
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+        .video-container img:hover {
+            transform: scale(1.05);
         }
         .subscribe-container {
             margin-top: 20px;
@@ -88,7 +85,9 @@
     <div class="container">
         <h1>ORACIÓN DE LA MAÑANA</h1>
         <div class="video-container">
-            <a href="https://www.youtube.com/watch?v=gh0dPGReBzk" target="_blank">📺 Ver Video en YouTube</a>
+            <a href="https://www.youtube.com/watch?v=gh0dPGReBzk" target="_blank">
+                <img src="https://img.youtube.com/vi/gh0dPGReBzk/maxresdefault.jpg" alt="Ver Video en YouTube">
+            </a>
         </div>
         <div class="subscribe-container">
             <p class="subscribe-text">SUSCRÍBETE SI AMAS A NUESTRO DIOS</p>
