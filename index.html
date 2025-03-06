@@ -32,11 +32,14 @@
         }
         .video-container {
             margin-top: 20px;
+            position: relative;
+            display: inline-block;
         }
         .video-container a {
             display: block;
             text-decoration: none;
             color: inherit;
+            position: relative;
         }
         .video-container img {
             width: 100%;
@@ -47,6 +50,28 @@
         }
         .video-container img:hover {
             transform: scale(1.05);
+        }
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s;
+        }
+        .play-button:hover {
+            background: rgba(0, 0, 0, 0.9);
+        }
+        .play-button::before {
+            content: '\25B6';
+            font-size: 40px;
+            color: white;
         }
         .subscribe-container {
             margin-top: 20px;
@@ -85,8 +110,9 @@
     <div class="container">
         <h1>ORACIÓN DE LA MAÑANA</h1>
         <div class="video-container">
-            <a href="https://youtu.be/FFWz3EIW-Fw?si=Np2w5l0-VdI5MEd4" target="_blank">
-                <img src="https://img.youtube.com/vi/FFWz3EIW-Fw/maxresdefault.jpg" alt="Ver Video en YouTube">
+            <a href="https://www.youtube.com/watch?v=OnQkKUXfULo" target="_blank">
+                <img src="https://img.youtube.com/vi/OnQkKUXfULo/maxresdefault.jpg" alt="Ver Video en YouTube">
+                <div class="play-button"></div>
             </a>
         </div>
         <div class="subscribe-container">
@@ -100,4 +126,5 @@
     </div>
 </body>
 </html>
+
 
